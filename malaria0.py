@@ -30,7 +30,7 @@ def asciiart(in_f, SC, GCF,  out_f, color1='black', color2='blue', bgcolor='whit
 
     #open the input file
     img = Image.open(in_f)
-    model = torch.load('/home/josep/Escritorio/streamlit-malaria/model_epoch_120.pth', map_location=torch.device('cpu'))
+    model = torch.load('./model_epoch_120.pth', map_location=torch.device('cpu'))
 
     device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
     #image = torchvision.io.read_image(in_f)
